@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="len_0dp">0dp</dimen>
+    <dimen name="len_4dp">4dp</dimen>
+    <dimen name="len_8dp">8dp</dimen>
+    <dimen name="len_12dp">12dp</dimen>
+    <dimen name="len_16dp">16dp</dimen>
+    <dimen name="len_22dp">22dp</dimen>
+    <dimen name="len_24dp">24dp</dimen>
+    <dimen name="len_32dp">32dp</dimen>
+    <dimen name="len_48dp">48dp</dimen>
+    <dimen name="len_44dp">44dp</dimen>
+    <dimen name="len_56dp">56dp</dimen>
+    <dimen name="len_64dp">64dp</dimen>
+    <dimen name="len_72dp">72dp</dimen>
+    <dimen name="len_80dp">80dp</dimen>
+    <dimen name="len_100dp">100dp</dimen>
+    <dimen name="len_105dp">105dp</dimen>
+    <dimen name="len_110dp">110dp</dimen>
+    <dimen name="len_115dp">115dp</dimen>
+    <dimen name="len_120dp">120dp</dimen>
+    <dimen name="len_125dp">125dp</dimen>
+    <dimen name="len_150dp">150dp</dimen>
+    <dimen name="len_225dp">225dp</dimen>
+    <dimen name="len_230dp">230dp</dimen>
+    <dimen name="len_240dp">240dp</dimen>
+    <dimen name="banner_width">310dp</dimen>
+
+    <dimen name="font_12sp">12sp</dimen>
+    <dimen name="font_16sp">16sp</dimen>
+    <dimen name="font_20sp">20sp</dimen>
+    <dimen name="font_24sp">24sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="appbar_padding">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+</resources>

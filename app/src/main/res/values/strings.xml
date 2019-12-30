@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MovieAppDesign</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Popular</string>
+    <string name="title_notifications">Profile</string>
+    <string name="title_search">Search</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="content_now_playing">Now Playing</string>
+    <string name="content_movie">Movie</string>
+    <string name="content_tv_shows">TV Shows</string>
+    <string name="content_detail">Detail</string>
+    <string name="content_more">More</string>
+</resources>
