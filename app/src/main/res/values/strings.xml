@@ -1,13 +1,37 @@
 <resources>
     <string name="app_name">MovieAppDesign</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Popular</string>
-    <string name="title_notifications">Profile</string>
-    <string name="title_search">Search</string>
-    <string name="title_favorite">Favorite</string>
-    <string name="content_now_playing">Now Playing</string>
-    <string name="content_movie">Movie</string>
-    <string name="content_tv_shows">TV Shows</string>
-    <string name="content_detail">Detail</string>
-    <string name="content_more">More</string>
+
+    <!--  Label  -->
+    <string name="label_home">Home</string>
+    <string name="label_popular">Popular</string>
+    <string name="label_profile">Profile</string>
+    <string name="label_search">Search</string>
+    <string name="label_favorite">Favorite</string>
+    <string name="label_now_playing">Now Playing</string>
+    <string name="label_movie">Movie</string>
+    <string name="label_tv_shows">TV Shows</string>
+    <string name="label_detail">Detail</string>
+    <string name="label_overview">Overview</string>
+    <string name="label_cast">Cast</string>
+    <string name="label_more">More</string>
+    <string name="label_or">Or</string>
+    <string name="label_video">Video</string>
+
+    <!--  Content Description  -->
+    <string name="content_image_banner">Banner</string>
+    <string name="content_image_poster">Poster</string>
+    <string name="content_image_backdrop">Backdrop</string>
+    <string name="content_image_not_found">Not Found</string>
+    <string name="content_image_logo">Logo</string>
+    <string name="content_movie_title">Movie Title</string>
+    <string name="content_movie_rating">Movie Rating</string>
+    <string name="content_movie_genres">Movie Genres</string>
+    <string name="content_overview">Overview Not Found</string>
+    <string name="content_video_thumbnail">Youtube thumbnail</string>
+
+    <!--  Button  -->
+    <string name="btn_google">Signin With Google</string>
+    <string name="btn_facebook">Signin With Facebook</string>
+    <string name="btn_signin">Signin With Dmovies Account</string>
+    <string name="btn_signup">Signup</string>
 </resources>

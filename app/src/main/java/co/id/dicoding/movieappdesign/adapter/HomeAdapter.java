@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 import co.id.dicoding.movieappdesign.R;
 
+@SuppressWarnings({"FieldCanBeLocal", "unused"})
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.CardHolder> {
     private ArrayList<String> movie;
     private Context context;
@@ -46,10 +47,10 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.CardHolder> {
         return movie.size();
     }
 
-    public class CardHolder extends RecyclerView.ViewHolder {
+    class CardHolder extends RecyclerView.ViewHolder {
         ImageView cardView;
 
-        public CardHolder(@NonNull View itemView) {
+        CardHolder(@NonNull View itemView) {
             super(itemView);
             cardView = itemView.findViewById(R.id.bg_cardview);
         }

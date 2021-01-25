@@ -10,14 +10,13 @@ import co.id.dicoding.movieappdesign.rest.ListTrendingResponse;
 public class PopularViewModel extends ViewModel {
 
     private MutableLiveData<ListTrendingResponse> trendingResponseMutableLiveData;
-    private TrendRepository trendRepository;
 
     public PopularViewModel() {
-        trendRepository = TrendRepository.getInstance();
+        TrendRepository trendRepository = TrendRepository.getInstance();
         trendingResponseMutableLiveData = trendRepository.loadTrending();
     }
 
-    public LiveData<ListTrendingResponse> getTrending() {
+    LiveData<ListTrendingResponse> getTrending() {
         return trendingResponseMutableLiveData;
     }
 }

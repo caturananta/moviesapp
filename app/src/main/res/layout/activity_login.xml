@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo"
+        android:contentDescription="@string/content_image_logo" />
+
+    <Button
+        android:id="@+id/signinGoogleButton"
+        style="@style/Button.Secondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:drawableStart="@drawable/ic_google"
+        android:drawableLeft="@drawable/ic_google"
+        android:paddingStart="@dimen/len_12dp"
+        android:paddingLeft="@dimen/len_12dp"
+        android:paddingEnd="@dimen/len_4dp"
+        android:paddingRight="@dimen/len_4dp"
+        android:text="@string/btn_google"
+        app:layout_constraintBottom_toTopOf="@id/signinFacebookButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/signinFacebookButton"
+        style="@style/Button.Secondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/len_16dp"
+        android:drawableStart="@drawable/ic_facebook"
+        android:drawableLeft="@drawable/ic_facebook"
+        android:paddingStart="@dimen/len_12dp"
+        android:paddingLeft="@dimen/len_12dp"
+        android:paddingEnd="@dimen/len_4dp"
+        android:paddingRight="@dimen/len_4dp"
+        android:text="@string/btn_facebook"
+        app:layout_constraintBottom_toTopOf="@id/layout_or"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="RtlHardcoded" />
+
+    <LinearLayout
+        android:id="@+id/layout_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/len_16dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/len_48dp"
+        android:paddingRight="@dimen/len_48dp"
+        app:layout_constraintBottom_toTopOf="@id/signinButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:background="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/text_or"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/label_or"
+            android:textColor="@android:color/white" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:background="@color/colorAccent" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/signinButton"
+        style="@style/Button.Secondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:paddingStart="@dimen/len_12dp"
+        android:paddingLeft="@dimen/len_12dp"
+        android:paddingEnd="@dimen/len_4dp"
+        android:paddingRight="@dimen/len_4dp"
+        android:drawableStart="@drawable/ic_email"
+        android:drawableLeft="@drawable/ic_email"
+        android:text="@string/btn_signin"
+        app:layout_constraintBottom_toTopOf="@id/signupButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/signupButton"
+        style="@style/Button.Gradient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:paddingStart="@dimen/len_12dp"
+        android:paddingLeft="@dimen/len_12dp"
+        android:paddingEnd="@dimen/len_4dp"
+        android:paddingRight="@dimen/len_4dp"
+        android:text="@string/btn_signup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="RtlHardcoded" />
+</androidx.constraintlayout.widget.ConstraintLayout>

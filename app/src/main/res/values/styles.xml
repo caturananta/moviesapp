@@ -14,4 +14,184 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.NoActionBarWhite" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Text">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Text.Normal">
+        <item name="android:textSize">@dimen/font_16sp</item>
+    </style>
+
+    <style name="Text.Normal.Bold" parent="Text.Normal">
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+
+    <style name="Text.Large">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textSize">@dimen/font_20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Small" parent="Text">
+        <item name="android:textSize">@dimen/font_13sp</item>
+    </style>
+
+    <style name="Text.Uppercase">
+        <item name="textAllCaps">true</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="AppTheme.Splash" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Button">
+        <item name="android:borderlessButtonStyle">?android:attr/borderlessButtonStyle</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="AppTheme.Button.Secondary">
+        <item name="android:background">@drawable/bg_btn_fx_outline</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppTheme.Button.Secondary.Small">
+        <item name="android:height">@dimen/len_32dp</item>
+        <item name="android:minHeight">@dimen/len_32dp</item>
+    </style>
+
+    <style name="Button" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_marginLeft">@dimen/len_48dp</item>
+        <item name="android:layout_marginRight">@dimen/len_48dp</item>
+        <item name="android:layout_marginTop">@dimen/len_16dp</item>
+        <item name="android:layout_marginBottom">@dimen/len_16dp</item>
+    </style>
+
+    <style name="Button.Gradient" parent="Button">
+        <item name="android:background">@drawable/bg_btn_outline_2</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Button.Gradient.Small" parent="Button.Gradient">
+        <item name="android:height">@dimen/len_32dp</item>
+        <item name="android:minHeight">@dimen/len_32dp</item>
+    </style>
+
+    <style name="Button.Primary">
+        <item name="android:background">@drawable/bg_btn_fx_solid</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:borderlessButtonStyle">?android:attr/borderlessButtonStyle</item>
+    </style>
+
+    <style name="Button.Secondary">
+        <item name="android:background">@drawable/bg_btn_fx_outline</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Search" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_marginLeft">@dimen/len_12dp</item>
+        <item name="android:layout_marginRight">@dimen/len_12dp</item>
+        <item name="android:layout_marginTop">@dimen/len_16dp</item>
+        <item name="android:layout_marginBottom">@dimen/len_16dp</item>
+    </style>
+
+    <style name="Search.Circle">
+        <item name="android:background">@drawable/bg_btn_fx_outline</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Button.Primary.Group">
+        <item name="android:layout_marginTop">@dimen/len_8dp</item>
+        <item name="android:layout_marginBottom">@dimen/len_8dp</item>
+    </style>
+
+    <style name="Button.Secondary.Group">
+        <item name="android:layout_marginTop">@dimen/len_4dp</item>
+        <item name="android:layout_marginBottom">@dimen/len_4dp</item>
+    </style>
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.Container">
+        <item name="android:layout_marginTop">@dimen/len_16dp</item>
+        <item name="android:layout_marginBottom">@dimen/len_16dp</item>
+        <item name="android:layout_marginLeft">@dimen/len_12dp</item>
+        <item name="android:layout_marginRight">@dimen/len_12dp</item>
+    </style>
+
+    <style name="AppTheme.Container.Profile">
+        <item name="android:paddingTop">@dimen/len_16dp</item>
+        <item name="android:paddingBottom">@dimen/len_16dp</item>
+        <item name="android:paddingLeft">@dimen/len_56dp</item>
+        <item name="android:paddingStart">@dimen/len_56dp</item>
+        <item name="android:paddingRight">@dimen/len_56dp</item>
+        <item name="android:paddingEnd">@dimen/len_56dp</item>
+        <item name="android:background">@drawable/bg_btn_outline_2</item>
+    </style>
+
+    <style name="AppTheme.ContainerSmall">
+        <item name="android:layout_marginTop">@dimen/len_4dp</item>
+        <item name="android:layout_marginBottom">@dimen/len_4dp</item>
+        <item name="android:layout_marginLeft">@dimen/len_22dp</item>
+        <item name="android:layout_marginRight">@dimen/len_22dp</item>
+    </style>
+
+    <style name="AppTheme.Container.Card">
+        <item name="android:layout_marginLeft">@dimen/len_8dp</item>
+        <item name="android:layout_marginRight">@dimen/len_8dp</item>
+        <item name="cardCornerRadius">@dimen/len_8dp</item>
+        <item name="cardElevation">@dimen/len_4dp</item>
+        <item name="cardBackgroundColor">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.Container.Card.Profile">
+        <item name="android:layout_marginLeft">@dimen/len_8dp</item>
+        <item name="android:layout_marginRight">@dimen/len_8dp</item>
+        <item name="cardCornerRadius">@dimen/len_8dp</item>
+        <item name="cardElevation">@dimen/len_4dp</item>
+    </style>
+
+    <style name="AppTheme.EditText">
+        <item name="android:paddingLeft">@dimen/len_12dp</item>
+        <item name="android:paddingRight">@dimen/len_12dp</item>
+        <item name="android:textSize">@dimen/font_16sp</item>
+    </style>
+
+    <style name="AppTheme.Spinner" parent="Widget.AppCompat.Spinner.Underlined">
+        <item name="android:layout_marginTop">@dimen/len_4dp</item>
+    </style>
+
+    <style name="AppTheme.DetailItem">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/font_16sp</item>
+    </style>
+
+    <style name="AppTheme.DetailItem.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TabLayoutTextStyle" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
 </resources>

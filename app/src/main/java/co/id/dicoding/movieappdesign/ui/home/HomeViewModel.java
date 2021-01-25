@@ -13,22 +13,20 @@ public class HomeViewModel extends ViewModel {
 
     private MutableLiveData<ListMovieResponse> movieResponseMutableLiveData;
     private MutableLiveData<ListTvShowResponse> tvShowResponseMutableLiveData;
-    private MovieRepository movieRepository;
-    private TvShowRepository tvShowRepository;
 
     public HomeViewModel() {
-        movieRepository = MovieRepository.getInstance();
+        MovieRepository movieRepository = MovieRepository.getInstance();
         movieResponseMutableLiveData = movieRepository.loadMovies();
 
-        tvShowRepository = TvShowRepository.getInstance();
+        TvShowRepository tvShowRepository = TvShowRepository.getInstance();
         tvShowResponseMutableLiveData = tvShowRepository.loadTvShows();
     }
 
-    public LiveData<ListMovieResponse> getMovies() {
+    LiveData<ListMovieResponse> getMovies() {
         return movieResponseMutableLiveData;
     }
 
-    public LiveData<ListTvShowResponse> getTvShows() {
+    LiveData<ListTvShowResponse> getTvShows() {
         return tvShowResponseMutableLiveData;
     }
 

@@ -32,24 +32,19 @@ import co.id.dicoding.movieappdesign.rest.ListTvShowResponse;
 
 public class HomeFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
     private RecyclerView recyclerView, recyclerViewMovie, recyclerViewTvShow;
-    private HomeAdapter itemAdapter;
-    private ArrayList<String> banner = new ArrayList<String>(Arrays.asList("1", "2", "3", "4"));
+    private ArrayList<String> banner = new ArrayList<>(Arrays.asList("1", "2", "3", "4"));
     private ArrayList<Movie> movies = new ArrayList<>();
     private ArrayList<TvShow> tvShows = new ArrayList<>();
-    private final String TAG = HomeFragment.class.getSimpleName();
-    private MovieAdapter movieAdapter;
-    private TvShowAdapter tvShowAdapter;
     private ShimmerFrameLayout shimmerFrameLayout, shimmerFrameLayout2;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
+        HomeViewModel homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        recyclerView = (RecyclerView) root.findViewById(R.id.recycler);
-        recyclerViewMovie = (RecyclerView) root.findViewById(R.id.recycler_movie);
-        recyclerViewTvShow = (RecyclerView) root.findViewById(R.id.recycler_tvshow);
+        recyclerView = root.findViewById(R.id.recycler);
+        recyclerViewMovie = root.findViewById(R.id.recycler_movie);
+        recyclerViewTvShow = root.findViewById(R.id.recycler_tvshow);
         final LinearLayoutManager layoutManagerCenter = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManagerCenter);
         recyclerView.post(new Runnable() {
@@ -61,7 +56,7 @@ public class HomeFragment extends Fragment {
                 layoutManagerCenter.scrollToPositionWithOffset(1, offset);
             }
         });
-        itemAdapter = new HomeAdapter(banner, getActivity());
+        HomeAdapter itemAdapter = new HomeAdapter(banner, getActivity());
         recyclerView.setAdapter(itemAdapter);
         SnapHelper snapHelperCenter = new LinearSnapHelper();
         snapHelperCenter.attachToRecyclerView(recyclerView);
@@ -97,29 +92,27 @@ public class HomeFragment extends Fragment {
     }
 
     private void showMovieList(ArrayList<Movie> movies) {
-        if (movies.isEmpty()) {
-
-        } else {
+        if (!movies.isEmpty()) {
             shimmerFrameLayout.stopShimmer();
             shimmerFrameLayout.setVisibility(View.GONE);
             recyclerViewMovie.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
-            movieAdapter = new MovieAdapter(movies, getActivity());
+            //    private final String TAG = HomeFragment.class.getSimpleName();
+            MovieAdapter movieAdapter = new MovieAdapter(movies, getActivity());
             recyclerViewMovie.setAdapter(movieAdapter);
         }
     }
 
     private void showTvShowList(ArrayList<TvShow> tvShows) {
-        if (tvShows.isEmpty()) {
-
-        } else {
+        if (!tvShows.isEmpty()) {
             shimmerFrameLayout2.stopShimmer();
             shimmerFrameLayout2.setVisibility(View.GONE);
             recyclerViewTvShow.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
-            tvShowAdapter = new TvShowAdapter(tvShows, getActivity());
+            TvShowAdapter tvShowAdapter = new TvShowAdapter(tvShows, getActivity());
             recyclerViewTvShow.setAdapter(tvShowAdapter);
         }
     }
 
+    @SuppressWarnings("NullableProblems")
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);

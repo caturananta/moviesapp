@@ -8,24 +8,24 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="co.id.dicoding.movieappdesign.ui.home.HomeFragment"
-        android:label="@string/title_home"
+        android:label="@string/label_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_popular"
         android:name="co.id.dicoding.movieappdesign.ui.popular.PopularFragment"
-        android:label="@string/title_dashboard"
+        android:label="@string/label_popular"
         tools:layout="@layout/fragment_popular" />
 
     <fragment
         android:id="@+id/navigation_favorite"
         android:name="co.id.dicoding.movieappdesign.ui.favorite.FavoriteFragment"
-        android:label="@string/title_favorite"
+        android:label="@string/label_favorite"
         tools:layout="@layout/fragment_favorite" />
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="co.id.dicoding.movieappdesign.ui.profile.NotificationsFragment"
-        android:label="@string/title_notifications"
+        android:label="@string/label_profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>

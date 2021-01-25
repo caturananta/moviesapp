@@ -12,11 +12,12 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+@SuppressWarnings({"FieldCanBeLocal", "NullableProblems"})
 public class TvShowRepository {
 
     private final String apiKey = BuildConfig.TMDB_API_KEY;
     private final String TAG = TvShowRepository.class.getSimpleName();
-    private String lang = "id";
+    private String lang = "en";
 
     private static TvShowRepository tvShowRepository;
 
@@ -35,7 +36,7 @@ public class TvShowRepository {
         tvs.enqueue(new Callback<ListTvShowResponse>() {
             @Override
             public void onResponse(Call<ListTvShowResponse> call, Response<ListTvShowResponse> response) {
-                Log.d(TAG, "onResponse: first tv show is " + response.body().getResults().get(0).getName());
+                Log.d(TAG, "onResponse: first tv show is " + (response.body() != null ? response.body().getResults().get(0).getName() : 0));
                 if (response.isSuccessful()) {
                     if (response.body() != null) {
                         tvShowsData.setValue(response.body());

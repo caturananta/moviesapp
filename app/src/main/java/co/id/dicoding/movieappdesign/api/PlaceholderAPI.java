@@ -4,11 +4,13 @@ import co.id.dicoding.movieappdesign.rest.ListCreditResponse;
 import co.id.dicoding.movieappdesign.rest.ListMovieResponse;
 import co.id.dicoding.movieappdesign.rest.ListTrendingResponse;
 import co.id.dicoding.movieappdesign.rest.ListTvShowResponse;
+import co.id.dicoding.movieappdesign.rest.ListVideoResponse;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
+@SuppressWarnings("unused")
 public interface PlaceholderAPI {
 
     @GET("movie")
@@ -31,6 +33,15 @@ public interface PlaceholderAPI {
 
     @GET("{movieId}/credits")
     Call<ListCreditResponse> getCredits(@Path("movieId") int movieId, @Query("api_key") String api);
+
+    @GET("{tvId}/credits")
+    Call<ListCreditResponse> getCreditsTv(@Path("tvId") int tvId, @Query("api_key") String api);
+
+    @GET("{movieId}/videos")
+    Call<ListVideoResponse> getVideo(@Path("movieId") int movieId, @Query("api_key") String api);
+
+    @GET("{tvId}/videos")
+    Call<ListVideoResponse> getVideoTv(@Path("tvId") int tvId, @Query("api_key") String api);
 
     @GET("week")
     Call<ListTrendingResponse> getTrending(@Query("api_key") String api, @Query("language") String lang);

@@ -22,19 +22,17 @@ import co.id.dicoding.movieappdesign.rest.ListTrendingResponse;
 
 public class PopularFragment extends Fragment {
 
-    private PopularViewModel popularViewModel;
     private RecyclerView recyclerView;
-    private PopularAdapter popularAdapter;
     private ArrayList<Trend> trends = new ArrayList<>();
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        popularViewModel = ViewModelProviders.of(this).get(PopularViewModel.class);
+        PopularViewModel popularViewModel = ViewModelProviders.of(this).get(PopularViewModel.class);
         View root = inflater.inflate(R.layout.fragment_popular, container, false);
 
-        recyclerView = (RecyclerView) root.findViewById(R.id.rv_popular);
+        recyclerView = root.findViewById(R.id.rv_popular);
 
-        popularViewModel.getTrending().observe(this, new Observer<ListTrendingResponse>() {
+        popularViewModel.getTrending().observe(getViewLifecycleOwner(), new Observer<ListTrendingResponse>() {
             @Override
             public void onChanged(ListTrendingResponse listTrendingResponse) {
                 List<Trend> datas = listTrendingResponse.getResults();
@@ -46,9 +44,9 @@ public class PopularFragment extends Fragment {
         return root;
     }
 
-    private void showMovieList(ArrayList<Trend> movies) {
+    private void showMovieList(ArrayList<Trend> trends) {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        popularAdapter = new PopularAdapter(movies, getActivity());
+        PopularAdapter popularAdapter = new PopularAdapter(trends, getActivity());
         recyclerView.setAdapter(popularAdapter);
     }
 }

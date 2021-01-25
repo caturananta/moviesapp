@@ -5,6 +5,7 @@ import android.os.Parcelable;
 
 import java.util.ArrayList;
 
+@SuppressWarnings({"unused", "WeakerAccess"})
 public class Trend implements Parcelable {
 
     private int id;
@@ -164,7 +165,7 @@ public class Trend implements Parcelable {
         this.overview = in.readString();
         this.poster_path = in.readString();
         this.media_type = in.readString();
-        this.genre_ids = new ArrayList<Integer>();
+        this.genre_ids = new ArrayList<>();
         in.readList(this.genre_ids, Integer.class.getClassLoader());
     }
 

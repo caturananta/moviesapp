@@ -21,13 +21,18 @@
     <dimen name="len_120dp">120dp</dimen>
     <dimen name="len_125dp">125dp</dimen>
     <dimen name="len_150dp">150dp</dimen>
+    <dimen name="len_180dp">180dp</dimen>
+    <dimen name="len_200dp">200dp</dimen>
     <dimen name="len_225dp">225dp</dimen>
     <dimen name="len_230dp">230dp</dimen>
     <dimen name="len_240dp">240dp</dimen>
     <dimen name="banner_width">310dp</dimen>
 
     <dimen name="font_12sp">12sp</dimen>
+    <dimen name="font_13sp">13sp</dimen>
+    <dimen name="font_14sp">14sp</dimen>
     <dimen name="font_16sp">16sp</dimen>
+    <dimen name="font_18sp">18sp</dimen>
     <dimen name="font_20sp">20sp</dimen>
     <dimen name="font_24sp">24sp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->

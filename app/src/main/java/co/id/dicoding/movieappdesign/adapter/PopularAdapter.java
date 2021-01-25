@@ -1,11 +1,14 @@
 package co.id.dicoding.movieappdesign.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -25,8 +28,10 @@ import java.util.ArrayList;
 import co.id.dicoding.movieappdesign.R;
 import co.id.dicoding.movieappdesign.constant.Constant;
 import co.id.dicoding.movieappdesign.model.Trend;
+import co.id.dicoding.movieappdesign.ui.detail.DetailActivity;
 import co.id.dicoding.movieappdesign.utils.Genres;
 
+@SuppressWarnings({"FieldCanBeLocal", "unused"})
 public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.PopularHolder> {
     private ArrayList<Trend> trends;
     private Context context;
@@ -50,7 +55,7 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.PopularH
         float onerm = (float) (d);
         String s = "";
 
-        ArrayList<String> n = new ArrayList<String>();
+        ArrayList<String> n = new ArrayList<>();
         for (Integer i : trend.getGenre_ids()) {
             n.add(String.valueOf(i));
         }
@@ -78,6 +83,16 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.PopularH
                     }
                 })
                 .into(holder.poster);
+        Log.e("CTR", "onBindViewHolder: "+trend.getId() );
+        holder.frameLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent detailMovie = new Intent(context, DetailActivity.class);
+                detailMovie.putExtra(Constant.EXTRA_DATA, trend);
+                detailMovie.putExtra(Constant.EXTRA_FLAG, Constant.FLAG_POPULAR);
+                context.startActivity(detailMovie);
+            }
+        });
     }
 
     @Override
@@ -85,13 +100,15 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.PopularH
         return trends.size();
     }
 
-    public class PopularHolder extends RecyclerView.ViewHolder {
+    class PopularHolder extends RecyclerView.ViewHolder {
         ImageView poster;
         TextView title, ratingText, mediaType, genre;
         RatingBar rating;
+        FrameLayout frameLayout;
 
-        public PopularHolder(@NonNull View itemView) {
+        PopularHolder(@NonNull View itemView) {
             super(itemView);
+            frameLayout = itemView.findViewById(R.id.fl_popular);
             poster = itemView.findViewById(R.id.iv_popular);
             title = itemView.findViewById(R.id.tv_title_popular);
             rating = itemView.findViewById(R.id.rb_popular);

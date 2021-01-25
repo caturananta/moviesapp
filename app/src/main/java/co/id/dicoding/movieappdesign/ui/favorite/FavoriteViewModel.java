@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel;
 
 public class FavoriteViewModel extends ViewModel {
 
-    public String getText() {
+    String getText() {
         return "Favorite Fragment";
     }
 

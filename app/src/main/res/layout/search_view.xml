@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="250dp"
     android:layout_height="fill_parent">
 
@@ -9,17 +10,21 @@
         android:layout_height="match_parent"
         android:layout_margin="@dimen/len_12dp"
         android:background="@color/colorPrimaryDark"
+        android:clickable="true"
+        android:focusable="true"
         android:gravity="center_vertical"
-        android:clickable="true">
+        tools:ignore="UselessParent">
 
         <TextView
             android:id="@+id/action_badge_textview"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="Search"
+            android:layout_marginStart="@dimen/len_8dp"
             android:layout_marginLeft="@dimen/len_8dp"
-            android:textColor="@color/blueaccent" />
+            android:gravity="center_horizontal"
+            android:text="@string/label_search"
+            android:textColor="@color/blueaccent"
+            tools:ignore="RtlHardcoded" />
 
     </RelativeLayout>
 

@@ -1,5 +1,6 @@
 package co.id.dicoding.movieappdesign.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -17,8 +18,11 @@ import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import co.id.dicoding.movieappdesign.R;
+import co.id.dicoding.movieappdesign.ui.search.SearchActivity;
 
 public class HomeActivity extends AppCompatActivity {
+
+    private final String TAG = HomeActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,14 +51,18 @@ public class HomeActivity extends AppCompatActivity {
         final MenuItem alertMenuItem = menu.findItem(R.id.search);
         alertMenuItem.setActionView(R.layout.search_view);
         RelativeLayout relativeLayout = (RelativeLayout) alertMenuItem.getActionView();
-        RelativeLayout parent = (RelativeLayout) relativeLayout.findViewById(R.id.parent_badge);
+        RelativeLayout parent = relativeLayout.findViewById(R.id.parent_badge);
         parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e("CTR", "onClick: ");
+                moveToSearch();
             }
         });
         return super.onPrepareOptionsMenu(menu);
     }
 
+    private void moveToSearch() {
+        Intent searchMovie = new Intent(this, SearchActivity.class);
+        this.startActivity(searchMovie);
+    }
 }

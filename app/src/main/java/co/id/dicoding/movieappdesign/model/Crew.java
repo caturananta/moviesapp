@@ -3,6 +3,7 @@ package co.id.dicoding.movieappdesign.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+@SuppressWarnings({"unused", "WeakerAccess"})
 public class Crew implements Parcelable {
 
     private String credit_id;

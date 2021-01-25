@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "733475505393",
+    "firebase_url": "https://moviesappdesign.firebaseio.com",
+    "project_id": "moviesappdesign",
+    "storage_bucket": "moviesappdesign.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733475505393:android:0fe8b9fe291b93e5bd1550",
+        "android_client_info": {
+          "package_name": "co.id.dicoding.movieappdesign"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733475505393-hpvume66jhpk53tfs8mv0kut02pef8bc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.id.dicoding.movieappdesign",
+            "certificate_hash": "d5b9a32bb4027fd926a86323d92f85594663247e"
+          }
+        },
+        {
+          "client_id": "733475505393-j2ar8rneikcg19lq30og5lm1iclapuj5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEzGMTl-X2hHfNbVkbq4A-PctR4toqaZQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733475505393-j2ar8rneikcg19lq30og5lm1iclapuj5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

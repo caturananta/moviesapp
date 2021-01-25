@@ -4,93 +4,91 @@ import java.util.ArrayList;
 
 public class Genres {
 
-    public ArrayList<String> getGenres(ArrayList<String> data){
+    public ArrayList<String> getGenres(ArrayList<String> data) {
 
-        ArrayList<String> n = data;
-
-        for (int i = 0; i < n.size(); i++) {
-            if (n.get(i).equals("28")) {
-                n.set(n.indexOf("28"), "Action");
+        for (int i = 0; i < data.size(); i++) {
+            if (data.get(i).equals("28")) {
+                data.set(data.indexOf("28"), "Action");
             }
-            if (n.get(i).equals("12")) {
-                n.set(n.indexOf("12"), "Adventure");
+            if (data.get(i).equals("12")) {
+                data.set(data.indexOf("12"), "Adventure");
             }
-            if (n.get(i).equals("16")) {
-                n.set(n.indexOf("16"), "Animation");
+            if (data.get(i).equals("16")) {
+                data.set(data.indexOf("16"), "Animation");
             }
-            if (n.get(i).equals("35")) {
-                n.set(n.indexOf("35"), "Comedy");
+            if (data.get(i).equals("35")) {
+                data.set(data.indexOf("35"), "Comedy");
             }
-            if (n.get(i).equals("80")) {
-                n.set(n.indexOf("80"), "Crime");
+            if (data.get(i).equals("80")) {
+                data.set(data.indexOf("80"), "Crime");
             }
-            if (n.get(i).equals("99")) {
-                n.set(n.indexOf("99"), "Documentary");
+            if (data.get(i).equals("99")) {
+                data.set(data.indexOf("99"), "Documentary");
             }
 
-            if (n.get(i).equals("18")) {
-                n.set(n.indexOf("18"), "Drama");
+            if (data.get(i).equals("18")) {
+                data.set(data.indexOf("18"), "Drama");
             }
-            if (n.get(i).equals("10751")) {
-                n.set(n.indexOf("10751"), "Family");
+            if (data.get(i).equals("10751")) {
+                data.set(data.indexOf("10751"), "Family");
             }
-            if (n.get(i).equals("14")) {
-                n.set(n.indexOf("14"), "Fantasy");
+            if (data.get(i).equals("14")) {
+                data.set(data.indexOf("14"), "Fantasy");
             }
-            if (n.get(i).equals("36")) {
-                n.set(n.indexOf("36"), "History");
+            if (data.get(i).equals("36")) {
+                data.set(data.indexOf("36"), "History");
             }
-            if (n.get(i).equals("27")) {
-                n.set(n.indexOf("27"), "Horror");
+            if (data.get(i).equals("27")) {
+                data.set(data.indexOf("27"), "Horror");
             }
-            if (n.get(i).equals("10402")) {
-                n.set(n.indexOf("10402"), "Music");
-            }
-
-            if (n.get(i).equals("9648")) {
-                n.set(n.indexOf("9648"), "Mystery");
-            }
-            if (n.get(i).equals("27")) {
-                n.set(n.indexOf("27"), "Horror");
-            }
-            if (n.get(i).equals("10402")) {
-                n.set(n.indexOf("10402"), "Music");
+            if (data.get(i).equals("10402")) {
+                data.set(data.indexOf("10402"), "Music");
             }
 
-            if (n.get(i).equals("9648")) {
-                n.set(n.indexOf("9648"), "Mystery");
+            if (data.get(i).equals("9648")) {
+                data.set(data.indexOf("9648"), "Mystery");
             }
-            if (n.get(i).equals("10749")) {
-                n.set(n.indexOf("10749"), "Romance");
+            if (data.get(i).equals("27")) {
+                data.set(data.indexOf("27"), "Horror");
             }
-            if (n.get(i).equals("878")) {
-                n.set(n.indexOf("878"), "Science Fiction");
-            }
-            if (n.get(i).equals("10770")) {
-                n.set(n.indexOf("10770"), "TV Movie");
+            if (data.get(i).equals("10402")) {
+                data.set(data.indexOf("10402"), "Music");
             }
 
-            if (n.get(i).equals("53")) {
-                n.set(n.indexOf("53"), "Thriller");
+            if (data.get(i).equals("9648")) {
+                data.set(data.indexOf("9648"), "Mystery");
             }
-            if (n.get(i).equals("10752")) {
-                n.set(n.indexOf("10752"), "War");
+            if (data.get(i).equals("10749")) {
+                data.set(data.indexOf("10749"), "Romance");
             }
-            if (n.get(i).equals("37")) {
-                n.set(n.indexOf("37"), "Western");
+            if (data.get(i).equals("878")) {
+                data.set(data.indexOf("878"), "Science Fiction");
             }
-            if (n.get(i).equals("10759")) {
-                n.set(n.indexOf("10759"), "Action & Adventure");
+            if (data.get(i).equals("10770")) {
+                data.set(data.indexOf("10770"), "TV Movie");
             }
-            if (n.get(i).equals("10762")) {
-                n.set(n.indexOf("10762"), "Kids");
+
+            if (data.get(i).equals("53")) {
+                data.set(data.indexOf("53"), "Thriller");
             }
-            if (n.get(i).equals("10765")) {
-                n.set(n.indexOf("10765"), "Sci-Fi & Fantasy");
+            if (data.get(i).equals("10752")) {
+                data.set(data.indexOf("10752"), "War");
+            }
+            if (data.get(i).equals("37")) {
+                data.set(data.indexOf("37"), "Western");
+            }
+            if (data.get(i).equals("10759")) {
+                data.set(data.indexOf("10759"), "Action & Adventure");
+            }
+            if (data.get(i).equals("10762")) {
+                data.set(data.indexOf("10762"), "Kids");
+            }
+            if (data.get(i).equals("10765")) {
+                data.set(data.indexOf("10765"), "Sci-Fi & Fantasy");
             }
         }
 
-        return n;
+        return data;
     }
 
 }

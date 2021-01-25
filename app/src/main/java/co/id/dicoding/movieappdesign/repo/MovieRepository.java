@@ -12,11 +12,12 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+@SuppressWarnings("NullableProblems")
 public class MovieRepository {
 
     private final String apiKey = BuildConfig.TMDB_API_KEY;
     private final String TAG = MovieRepository.class.getSimpleName();
-    private String lang = "id";
+    private String lang = "en";
 
     private static MovieRepository movieRepository;
 
@@ -36,7 +37,7 @@ public class MovieRepository {
         movies.enqueue(new Callback<ListMovieResponse>() {
             @Override
             public void onResponse(Call<ListMovieResponse> call, Response<ListMovieResponse> response) {
-                Log.d(TAG, "onResponse: first movie is " + response.body().getResults().get(0).getId());
+                Log.d(TAG, "onResponse: first movie is " + (response.body() != null ? response.body().getResults().get(0).getId() : 0));
                 if (response.isSuccessful()) {
                     if (response.body() != null) {
                         moviesData.setValue(response.body());
@@ -55,6 +56,7 @@ public class MovieRepository {
         return moviesData;
     }
 
+    @SuppressWarnings("unused")
     public MutableLiveData<ListMovieResponse> loadPopularMovies() {
         Log.e(TAG, "loadPopularMovies: hit");
         final MutableLiveData<ListMovieResponse> moviesData = new MutableLiveData<>();
@@ -65,7 +67,7 @@ public class MovieRepository {
         movies.enqueue(new Callback<ListMovieResponse>() {
             @Override
             public void onResponse(Call<ListMovieResponse> call, Response<ListMovieResponse> response) {
-                Log.d(TAG, "onResponse: first movie is " + response.body().getResults().get(0).getId());
+                Log.d(TAG, "onResponse: first movie is " + (response.body() != null ? response.body().getResults().get(0).getId() : 0));
                 if (response.isSuccessful()) {
                     if (response.body() != null) {
                         moviesData.setValue(response.body());

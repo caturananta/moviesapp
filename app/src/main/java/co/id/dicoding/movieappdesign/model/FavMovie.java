@@ -3,6 +3,7 @@ package co.id.dicoding.movieappdesign.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+@SuppressWarnings({"unused", "WeakerAccess", "NullableProblems"})
 public class FavMovie implements Parcelable {
     private int id;
     private String title;

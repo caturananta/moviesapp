@@ -80,15 +80,14 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MoviesViewHo
     @Override
     public int getItemCount() {
         return listMovie.size();
-
     }
 
-    public class MoviesViewHolder extends RecyclerView.ViewHolder {
+    class MoviesViewHolder extends RecyclerView.ViewHolder {
         ImageView moviePoster;
         TextView movieTitle;
         RatingBar rating;
 
-        public MoviesViewHolder(@NonNull View itemView) {
+        MoviesViewHolder(@NonNull View itemView) {
             super(itemView);
             moviePoster = itemView.findViewById(R.id.iv);
             movieTitle = itemView.findViewById(R.id.tv);

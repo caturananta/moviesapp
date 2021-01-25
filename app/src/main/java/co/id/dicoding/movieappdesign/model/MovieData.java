@@ -2,6 +2,7 @@ package co.id.dicoding.movieappdesign.model;
 
 import java.util.ArrayList;
 
+@SuppressWarnings({"unused", "WeakerAccess"})
 public class MovieData {
     public static String[][] data = new String[][]{
             {"Avenger", ""},

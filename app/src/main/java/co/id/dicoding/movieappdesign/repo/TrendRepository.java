@@ -12,11 +12,12 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+@SuppressWarnings({"FieldCanBeLocal", "NullableProblems"})
 public class TrendRepository {
 
     private final String apiKey = BuildConfig.TMDB_API_KEY;
     private final String TAG = TrendRepository.class.getSimpleName();
-    private String lang = "id";
+    private String lang = "en";
 
     private static TrendRepository trendRepository;
 
@@ -36,7 +37,7 @@ public class TrendRepository {
         movies.enqueue(new Callback<ListTrendingResponse>() {
             @Override
             public void onResponse(Call<ListTrendingResponse> call, Response<ListTrendingResponse> response) {
-                Log.d(TAG, "onResponse: first movie is " + response.body().getResults().get(0).getId());
+                Log.d(TAG, "onResponse: first movie is " + (response.body() != null ? response.body().getResults().get(0).getId() : 0));
                 if (response.isSuccessful()) {
                     if (response.body() != null) {
                         trendingData.setValue(response.body());

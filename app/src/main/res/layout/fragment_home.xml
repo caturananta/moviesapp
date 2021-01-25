@@ -38,7 +38,7 @@
                     android:fontFamily="sans-serif-condensed-medium"
                     android:gravity="left|bottom"
                     android:layout_gravity="bottom"
-                    android:text="@string/content_movie"
+                    android:text="@string/label_movie"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"
@@ -51,7 +51,7 @@
                     android:gravity="right|bottom"
                     android:layout_gravity="bottom"
                     android:textColor="@android:color/darker_gray"
-                    android:text="@string/content_more"
+                    android:text="@string/label_more"
                     android:textSize="12sp" />
 
             </LinearLayout>
@@ -113,7 +113,7 @@
                     android:fontFamily="sans-serif-condensed-medium"
                     android:gravity="left|bottom"
                     android:layout_gravity="bottom"
-                    android:text="@string/content_tv_shows"
+                    android:text="@string/label_tv_shows"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"
@@ -126,7 +126,7 @@
                     android:gravity="right|bottom"
                     android:layout_gravity="bottom"
                     android:textColor="@android:color/darker_gray"
-                    android:text="@string/content_more"
+                    android:text="@string/label_more"
                     android:textSize="12sp" />
 
             </LinearLayout>

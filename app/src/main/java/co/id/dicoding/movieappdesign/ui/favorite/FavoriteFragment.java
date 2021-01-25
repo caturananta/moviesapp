@@ -17,13 +17,11 @@ import co.id.dicoding.movieappdesign.R;
  */
 public class FavoriteFragment extends Fragment {
 
-    FavoriteViewModel favoriteViewModel;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        favoriteViewModel = ViewModelProviders.of(this).get(FavoriteViewModel.class);
+        FavoriteViewModel favoriteViewModel = ViewModelProviders.of(this).get(FavoriteViewModel.class);
         View root = inflater.inflate(R.layout.fragment_favorite, container, false);
         final TextView textView = root.findViewById(R.id.text_fav);
         textView.setText(favoriteViewModel.getText());
